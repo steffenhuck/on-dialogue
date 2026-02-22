@@ -1,5 +1,5 @@
 :root{
-  /* Bold chamber */
+  /* Chamber palette */
   --bg: #3b2f2a;             /* muted brown */
   --ink: #f3efe8;            /* warm off-white */
   --muted: rgba(243,239,232,0.72);
@@ -26,11 +26,11 @@ body{
 .wrap{
   width: min(var(--col), calc(100% - (2 * var(--gutter))));
   margin: 0 auto;
-  padding: clamp(42px, 7vh, 84px) 0 clamp(56px, 8vh, 96px);
+  padding: clamp(48px, 8vh, 96px) 0 clamp(60px, 9vh, 110px);
 }
 
 .masthead{
-  margin: 0 0 44px 0;
+  margin: 0 0 48px 0;
 }
 
 .title{
@@ -48,12 +48,14 @@ body{
   color: var(--muted);
 }
 
+/* Dialogue */
+
 .dialogue{
-  margin-top: 22px;
+  margin-top: 28px;
 }
 
 .turn{
-  margin: 0 0 18px 0;
+  margin: 0 0 20px 0;
 }
 
 .line{
@@ -64,14 +66,15 @@ body{
 
 .who{
   font-weight: 700;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   margin-right: 8px;
   white-space: nowrap;
 }
 
-/* Interludes: contained, quiet, generous breathing */
+/* Interludes */
+
 .interlude{
-  margin: clamp(52px, 7vh, 88px) 0;
+  margin: clamp(60px, 8vh, 100px) 0;
 }
 
 .interlude img{
@@ -80,9 +83,27 @@ body{
   height: auto;
 }
 
-/* Mobile tweaks */
+/* Link styling — quiet, not blue */
+
+a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(243,239,232,0.26);
+}
+
+a:hover{
+  border-bottom-color: rgba(243,239,232,0.55);
+}
+
+.subtitle a{
+  color: var(--muted);
+  border-bottom-color: rgba(243,239,232,0.18);
+}
+
+/* Mobile adjustments */
+
 @media (max-width: 520px){
   .line{ font-size: 17px; }
-  .masthead{ margin-bottom: 36px; }
-  .interlude{ margin: 44px 0; }
+  .masthead{ margin-bottom: 40px; }
+  .interlude{ margin: 48px 0; }
 }
