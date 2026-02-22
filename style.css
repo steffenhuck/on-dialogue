@@ -1,0 +1,88 @@
+:root{
+  /* Bold chamber */
+  --bg: #3b2f2a;             /* muted brown */
+  --ink: #f3efe8;            /* warm off-white */
+  --muted: rgba(243,239,232,0.72);
+
+  --col: 700px;
+  --gutter: clamp(20px, 5vw, 64px);
+
+  --lh: 1.78;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Serif 4", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap{
+  width: min(var(--col), calc(100% - (2 * var(--gutter))));
+  margin: 0 auto;
+  padding: clamp(42px, 7vh, 84px) 0 clamp(56px, 8vh, 96px);
+}
+
+.masthead{
+  margin: 0 0 44px 0;
+}
+
+.title{
+  margin: 0;
+  font-size: clamp(34px, 4.2vw, 48px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.08;
+}
+
+.subtitle{
+  margin: 14px 0 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dialogue{
+  margin-top: 22px;
+}
+
+.turn{
+  margin: 0 0 18px 0;
+}
+
+.line{
+  margin: 0;
+  font-size: 18px;
+  line-height: var(--lh);
+}
+
+.who{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+/* Interludes: contained, quiet, generous breathing */
+.interlude{
+  margin: clamp(52px, 7vh, 88px) 0;
+}
+
+.interlude img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  .line{ font-size: 17px; }
+  .masthead{ margin-bottom: 36px; }
+  .interlude{ margin: 44px 0; }
+}
